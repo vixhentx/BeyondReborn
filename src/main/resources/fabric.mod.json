@@ -3,10 +3,11 @@
   "id": "modid",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Beyond Reborn",
+  "description": "A Mod For BR Modpack!",
   "authors": [
-    "Me!"
+    "vix_hentx",
+    "qlagu"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
@@ -19,7 +20,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "stu.xwxstudio.beyondreborn.beyondrebornmain"
     ]
   },
   "mixins": [
@@ -29,7 +30,7 @@
   "depends": {
     "fabricloader": ">=0.14.6",
     "fabric": "*",
-    "minecraft": "~1.19",
+    "minecraft": "~1.18",
     "java": ">=17"
   },
   "suggests": {
