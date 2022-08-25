@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "beyondreborn",
   "version": "${version}",
 
   "name": "Beyond Reborn",
@@ -14,17 +14,17 @@
     "sources": "https://github.com/FabricMC/fabric-example-mod"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "license": "MIT",
+  "icon": "assets/beyondreborn/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "stu.xwxstudio.beyondreborn.beyondrebornmain"
+      "stu.xwxstudio.beyondreborn.BeyondRebornMain"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "beyondreborn.mixins.json"
   ],
 
   "depends": {
