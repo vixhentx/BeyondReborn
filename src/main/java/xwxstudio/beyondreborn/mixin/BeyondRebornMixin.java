@@ -1,6 +1,6 @@
-package stu.xwxstudio.beyondreborn.mixin;
+package xwxstudio.beyondreborn.mixin;
 
-import stu.xwxstudio.beyondreborn.BeyondRebornMain;
+import xwxstudio.beyondreborn.BeyondRebornMain;
 import net.minecraft.client.gui.screen.TitleScreen;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

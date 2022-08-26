@@ -10,8 +10,8 @@
     "qlagu"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://github.com/vixhentx/BeyondReborn",
+    "sources": "https://github.com/vixhentx/BeyondReborn"
   },
 
   "license": "MIT",
@@ -20,7 +20,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "stu.xwxstudio.beyondreborn.BeyondRebornMain"
+      "xwxstudio.beyondreborn.BeyondRebornMain"
     ]
   },
   "mixins": [
@@ -28,12 +28,15 @@
   ],
 
   "depends": {
-    "fabricloader": ">=0.14.6",
+    "fabricloader": ">=0.14.7",
+
     "fabric": "*",
     "minecraft": "~1.18",
-    "java": ">=17"
-  },
-  "suggests": {
-    "another-mod": "*"
+    "java": ">=17",
+    "techreborn": "*",
+    "advanced_reborn": "*",
+    "ad_astra": "*",
+    "create": "*",
+    "createaddition": "*"
   }
 }

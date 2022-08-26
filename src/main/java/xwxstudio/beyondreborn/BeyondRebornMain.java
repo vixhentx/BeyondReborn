@@ -1,4 +1,4 @@
-package stu.xwxstudio.beyondreborn;
+package xwxstudio.beyondreborn;
 
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
