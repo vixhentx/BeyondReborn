@@ -21,6 +21,9 @@
   "entrypoints": {
     "main": [
       "xwxstudio.beyondreborn.BeyondRebornMain"
+    ],
+    "client": [
+      "xwxstudio.beyondreborn.BeyondRebornClient"
     ]
   },
   "mixins": [
@@ -33,10 +36,8 @@
     "fabric": "*",
     "minecraft": "~1.18",
     "java": ">=17",
-    "techreborn": "*",
-    "advanced_reborn": "*",
-    "ad_astra": "*",
-    "create": "*",
-    "createaddition": "*"
+    "techreborn": "*"
+
+
   }
 }

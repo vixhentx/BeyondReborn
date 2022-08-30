@@ -4,9 +4,11 @@
   "package": "xwxstudio.beyondreborn.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "TechRebornMixin"
   ],
   "client": [
-    "BeyondRebornMixin"
+    "BeyondRebornMixin",
+    "TechRebornClientMixin"
   ],
   "injectors": {
     "defaultRequire": 1
