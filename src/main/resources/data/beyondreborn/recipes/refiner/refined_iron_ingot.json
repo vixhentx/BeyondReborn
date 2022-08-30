@@ -1,0 +1,13 @@
+{
+  "type": "beyondreborn:refiner",
+  "ingredients": [
+    {
+      "tag": "c:iron_ingots"
+    }
+  ],
+  "results": [
+    {
+      "item": "techreborn:refined_iron_ingot"
+    }
+  ]
+}

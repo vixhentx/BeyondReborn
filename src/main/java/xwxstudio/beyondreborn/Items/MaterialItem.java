@@ -1,4 +1,4 @@
-package xwxstudio.beyondreborn.Items.Materials;
+package xwxstudio.beyondreborn.Items;
 
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;

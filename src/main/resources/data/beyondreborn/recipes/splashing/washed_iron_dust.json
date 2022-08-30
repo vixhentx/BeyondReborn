@@ -1,0 +1,13 @@
+{
+  "type": "create:splashing",
+  "ingredients": [
+    {
+      "item": "beyondreborn:iron_dust"
+    }
+  ],
+  "results": [
+    {
+      "item": "beyondreborn:washed_iron_dust"
+    }
+  ]
+}
