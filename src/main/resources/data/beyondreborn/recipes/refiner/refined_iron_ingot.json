@@ -1,5 +1,7 @@
 {
-  "type": "beyondreborn:refiner",
+  "type": "beyondreborn:refining",
+  "power": 32,
+  "time": 200,
   "ingredients": [
     {
       "tag": "c:iron_ingots"
@@ -7,7 +9,8 @@
   ],
   "results": [
     {
-      "item": "techreborn:refined_iron_ingot"
+      "item": "techreborn:refined_iron_ingot",
+      "count": 2
     }
   ]
 }
