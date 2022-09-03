@@ -5,6 +5,7 @@ import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import xwxstudio.beyondreborn.Registry.*;
+import xwxstudio.beyondreborn.blockentitiy.GuiTypes;
 
 public class BeyondRebornMain implements ModInitializer {
 	// This logger is used to write text to the console and the log file.
@@ -26,6 +27,8 @@ public class BeyondRebornMain implements ModInitializer {
 		Items.init();
 		Blocks.init();
 		BlockEntities.init();
+		GuiTypes.init();
+		Recipes.init();
 
 		LOGGER.info("Beyond Reborn搞定!");
 	}

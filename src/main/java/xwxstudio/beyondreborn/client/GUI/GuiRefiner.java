@@ -7,6 +7,8 @@ import reborncore.client.gui.guibuilder.GuiBuilder;
 import reborncore.common.screen.BuiltScreenHandler;
 import xwxstudio.beyondreborn.blockentitiy.machine.RefinerBlockEntity;
 
+import java.sql.Ref;
+
 public class GuiRefiner extends GuiBase<BuiltScreenHandler> {
 
     RefinerBlockEntity blockEntity;

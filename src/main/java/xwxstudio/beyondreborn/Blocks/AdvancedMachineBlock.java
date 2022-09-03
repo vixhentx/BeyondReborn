@@ -14,7 +14,6 @@ public abstract class AdvancedMachineBlock extends BlockMachineBase {
         super(settings);
     }
 
-    // 1.17.1へのポート用
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
         return createBlockEntity(new TileCreateEvent(pos, state));
     }

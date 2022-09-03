@@ -1,38 +1,26 @@
 package xwxstudio.beyondreborn.blockentitiy.machine;
 
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.inventory.Inventory;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
-import net.minecraft.world.World;
-import reborncore.api.IToolDrop;
-import reborncore.api.blockentity.InventoryProvider;
-import reborncore.api.recipe.IRecipeCrafterProvider;
 import reborncore.client.screen.builder.ScreenHandlerBuilder;
-import reborncore.common.blockentity.MachineBaseBlockEntity;
-import reborncore.common.blocks.BlockMachineBase;
-import reborncore.common.powerSystem.PowerAcceptorBlockEntity;
 import reborncore.common.recipes.RecipeCrafter;
 import reborncore.common.screen.BuiltScreenHandler;
 import reborncore.common.screen.BuiltScreenHandlerProvider;
 import reborncore.common.util.RebornInventory;
 import xwxstudio.beyondreborn.BeyondRebornMain;
 import xwxstudio.beyondreborn.Events.TileCreateEvent;
+import xwxstudio.beyondreborn.Registry.BRContent;
 import xwxstudio.beyondreborn.Registry.BlockEntities;
-import xwxstudio.beyondreborn.Registry.Blocks;
 import xwxstudio.beyondreborn.Registry.Recipes;
 public class RefinerBlockEntity extends MonoIOEntity implements BuiltScreenHandlerProvider {
 
     public RefinerBlockEntity(BlockPos pos, BlockState state) {
-        super(BlockEntities.REFINER, pos, state, "Refiner", 32, 10_000, Blocks.REFINER , 2);
+        super(BlockEntities.REFINER, pos, state, "Refiner", 32, 10_000, BRContent.Machine.REFINER.block, 2);
         final int[] inputs = new int[]{0};
         final int[] outputs = new int[]{1};
         this.inventory = new RebornInventory<>(4, "RefinerBlockEntity", 64, this);
-        this.crafter = new RecipeCrafter(Recipes.REFINER, this, 2, 1, this.inventory, inputs, outputs);
+        this.crafter = new RecipeCrafter(Recipes.REFINING, this, 2, 1, this.inventory, inputs, outputs);
     }
 
     public RefinerBlockEntity(TileCreateEvent event) {

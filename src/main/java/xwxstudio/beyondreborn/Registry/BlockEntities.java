@@ -8,18 +8,26 @@ import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.registry.Registry;
 import org.apache.commons.lang3.Validate;
+import techreborn.init.TRBlockEntities;
 import xwxstudio.beyondreborn.BeyondRebornMain;
 import xwxstudio.beyondreborn.blockentitiy.machine.RefinerBlockEntity;
+
+import java.util.Arrays;
+import java.util.function.BiFunction;
 
 
 public class BlockEntities {
 
-    public static final BlockEntityType<RefinerBlockEntity> REFINER = Registry.register(Registry.BLOCK_ENTITY_TYPE, BeyondRebornMain.CreateID("refiner"), create(RefinerBlockEntity::new, Blocks.REFINER));
+    public static final BlockEntityType<RefinerBlockEntity> REFINER = register(RefinerBlockEntity::new, "refiner", BRContent.Machine.REFINER);
 
-    public static <T extends BlockEntity> BlockEntityType<T> create(FabricBlockEntityTypeBuilder.Factory<T> supplier, Block... blocks) {
-        return FabricBlockEntityTypeBuilder.create(supplier, blocks).build(null);
+    public static <T extends BlockEntity> BlockEntityType<T> register(BiFunction<BlockPos, BlockState, T> supplier, String name, ItemConvertible... items) {
+        return register(supplier, name, Arrays.stream(items).map(itemConvertible -> Block.getBlockFromItem(itemConvertible.asItem())).toArray(Block[]::new));
+    }
+
+    public static <T extends BlockEntity> BlockEntityType<T> register(BiFunction<BlockPos, BlockState, T> supplier, String name, Block... blocks) {
+        Validate.isTrue(blocks.length > 0, "no blocks for blockEntity entity type!");
+        return TRBlockEntities.register(new Identifier(BeyondRebornMain.MOD_ID, name).toString(), FabricBlockEntityTypeBuilder.create(supplier::apply, blocks));
     }
 
     public static void init()
