@@ -11,7 +11,7 @@ import net.minecraft.util.math.BlockPos;
 import org.apache.commons.lang3.Validate;
 import techreborn.init.TRBlockEntities;
 import xwxstudio.beyondreborn.BeyondRebornMain;
-import xwxstudio.beyondreborn.blockentitiy.machine.RefinerBlockEntity;
+import xwxstudio.beyondreborn.blockentitiy.machine.*;
 
 import java.util.Arrays;
 import java.util.function.BiFunction;
@@ -20,6 +20,7 @@ import java.util.function.BiFunction;
 public class BlockEntities {
 
     public static final BlockEntityType<RefinerBlockEntity> REFINER = register(RefinerBlockEntity::new, "refiner", BRContent.Machine.REFINER);
+    public static final BlockEntityType<SESUBlockEntity> SESU = register(SESUBlockEntity::new, "sesu", BRContent.Machine.SESU);
 
     public static <T extends BlockEntity> BlockEntityType<T> register(BiFunction<BlockPos, BlockState, T> supplier, String name, ItemConvertible... items) {
         return register(supplier, name, Arrays.stream(items).map(itemConvertible -> Block.getBlockFromItem(itemConvertible.asItem())).toArray(Block[]::new));

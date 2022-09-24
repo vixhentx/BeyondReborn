@@ -8,24 +8,19 @@ import techreborn.client.ClientGuiType;
 import techreborn.client.GuiFactory;
 import xwxstudio.beyondreborn.BeyondRebornMain;
 import xwxstudio.beyondreborn.blockentitiy.GuiTypes;
-import xwxstudio.beyondreborn.blockentitiy.machine.RefinerBlockEntity;
-import xwxstudio.beyondreborn.client.GUI.GuiRefiner;
+import xwxstudio.beyondreborn.blockentitiy.machine.*;
+import xwxstudio.beyondreborn.client.GUI.*;
 
 @Environment(EnvType.CLIENT)
 public class ClientGuiTypes
 {
-    public static final ClientGuiType<RefinerBlockEntity> REFINER = register(GuiTypes.REFINER, GuiRefiner::new);;
+    public static final ClientGuiType<RefinerBlockEntity> REFINER = register(GuiTypes.REFINER, GuiRefiner::new);
+    public static final ClientGuiType<SESUBlockEntity> SESU=register(GuiTypes.SESU,GuiSESU::new);
 
     private static <T extends BlockEntity> ClientGuiType<T> register(GuiType<T> type, GuiFactory<T> factory) {
-        BeyondRebornMain.LOGGER.info("现在正在注册ClientGuiType: "+type.getIdentifier().toString());
+        BeyondRebornMain.LOGGER.debug("现在正在注册ClientGuiType: "+type.getIdentifier().toString());
         return new ClientGuiType(type, factory);
     }
-    /*
-    static
-    {
-        REFINER = register(GuiTypes.REFINER, GuiRefiner::new);
-    }
-    */
 
     public static void init()
     {

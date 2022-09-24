@@ -9,4 +9,5 @@ public class MaterialItem extends Item {
     public MaterialItem(FabricItemSettings settings) {
         super(settings);
     }
+
 }

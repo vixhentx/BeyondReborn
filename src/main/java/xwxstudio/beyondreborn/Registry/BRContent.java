@@ -6,8 +6,9 @@ import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemStack;
 import techreborn.blocks.GenericMachineBlock;
 import techreborn.utils.InitUtils;
+import xwxstudio.beyondreborn.Blocks.*;
 import xwxstudio.beyondreborn.blockentitiy.GuiTypes;
-import xwxstudio.beyondreborn.blockentitiy.machine.RefinerBlockEntity;
+import xwxstudio.beyondreborn.blockentitiy.machine.*;
 
 import java.util.Locale;
 
@@ -15,7 +16,10 @@ public class BRContent
 {
     public enum Machine implements ItemConvertible {
 
-        REFINER(new GenericMachineBlock(GuiTypes.REFINER, RefinerBlockEntity::new));
+        REFINER(new GenericMachineBlock(GuiTypes.REFINER, RefinerBlockEntity::new)),
+
+        //Energy
+        SESU(new SESUBlock());
 
         public final String name;
         public final Block block;
